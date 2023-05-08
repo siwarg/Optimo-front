@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@font-face {
+  font-family: Montserrat;
+  src: url(assets/fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+.Mons{
+  font-family: Montserrat;
+}
+
+@font-face {
+  font-family: alkatra;
+  src: url(assets/fonts/Alkatra-VariableFont_wght.ttf) format('truetype');
+}
+.alk{
+  font-family: alkatra;
+}
+@font-face {
+  font-family: Lobster;
+  src: url(assets/fonts/Lobster-Regular.ttf) format('truetype');
+}
+.lob{
+  font-family: Lobster;
+}
+@font-face {
+  font-family: Lato;
+  src: url(assets/fonts/Lato-BoldItalic.ttf) format('truetype');
+}
+.Lato{
+  font-family: Lato;
+}

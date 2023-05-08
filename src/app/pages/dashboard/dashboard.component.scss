@@ -1,0 +1,40 @@
+.header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+
+}
+.logo{
+  width: 250px;
+  height: auto;
+  transform: scale(0.7);
+  transform-origin: left;
+}
+.navbar {
+  justify-content: space-between;
+}
+
+span {
+  padding-right: 1rem;
+}
+
+.main {
+
+}
+
+/*.footer {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  background-color: #F3F3F3;
+}*/
+.footer {
+  background-color: #f5f5f5;
+  padding-top: 8px;
+  justify-content: center;
+}
+p {
+  font-size: 14px;
+  color: #888;
+}

@@ -1,0 +1,50 @@
+<body class="bd">
+  <div class="mat-card-header">
+    <img src="../../../assets/logo-suez.png" class="logo">
+  </div>
+  <div class="main">
+    <div class="mat-title Lato title">
+      Outil de Planification des Tâches et des Interventions dans MAXIMO
+  </div>
+  <div class="container">
+    <mat-card>
+        <form #f="ngForm">
+            <div class="mat-align-center">
+                  <mat-form-field appearance="outline" >
+                     <mat-label>Login</mat-label>
+                          <input type="text" name="login" matInput [(ngModel)]="user.login" #l="ngModel" required>
+                     <mat-icon matSuffix><i class="fa-solid fa-user"></i></mat-icon>
+                  </mat-form-field>
+            </div>
+           <div class="alert error" *ngIf="l.invalid && l.touched" >
+              <div *ngIf="l?.errors?.required">l'identifiant est un champ obligatoire</div>
+           </div>
+          <div class="mat-align-center">
+                   <mat-form-field appearance="outline">
+                      <mat-label>Login.mdp</mat-label>
+                            <input type="password" name="password" matInput [(ngModel)]="user.password" #m="ngModel" required>
+                      <mat-icon matSuffix><i class="fa-solid fa-unlock"></i></mat-icon>
+                   </mat-form-field>
+            </div>
+            <div class="alert error" *ngIf="m.invalid && m.touched" >
+                <div *ngIf="m?.errors?.required">Le mot de passe est un champ obligatoire</div>
+            </div>
+
+            <div class="mb-3 d-flex">
+                  <button type="button" class="btn btn-op d-block mx-auto" [disabled]="f.invalid"><i class="fa-solid fa-check"></i>&nbsp;&nbsp;Se connecter</button>
+            </div>
+            <div class="hr-centered">
+                 <hr>OU<hr>
+            </div>
+            <div class="mb-3 d-flex">
+                  <button type="button" class="btn btn-light d-block mx-auto"><img src="../../../assets/MSFT.png" class="azure"> &nbsp; Continuer avec Microsoft Azure</button>
+            </div>
+        </form>
+    </mat-card>
+  </div>
+</div>
+<mat-toolbar class="footer">
+  <p>&copy; {{currentYear}} Sinorfi. Tous droits réservés.</p>
+</mat-toolbar>
+</body>
+
