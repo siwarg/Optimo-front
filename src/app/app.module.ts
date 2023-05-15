@@ -15,6 +15,7 @@ import { MsalGuard, MsalInterceptor, MsalModule, MsalRedirectComponent } from '@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { WorkOrderComponent } from './components/work-order/work-order.component';
 import { AssignmentComponent } from './components/assignment/assignment.component';
+import { AzureAdService } from './services/azure-ad.service';
 
 const isIE=window.navigator.userAgent.indexOf('MSIE') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 @NgModule({
@@ -42,7 +43,6 @@ const isIE=window.navigator.userAgent.indexOf('MSIE') > -1 || window.navigator.u
               redirectUri:'http://localhost:4200/dashboard',
               authority: 'https://login.microsoftonline.com/e3f5f93c-b43c-483d-8e0f-5a1d9fcb76e7',
               navigateToLoginRequestUrl: true,
-              postLogoutRedirectUri: 'http://localhost:4200/',
               knownAuthorities: ['login.microsoftonline.com']
             },
             cache:
@@ -72,7 +72,7 @@ const isIE=window.navigator.userAgent.indexOf('MSIE') > -1 || window.navigator.u
     provide: HTTP_INTERCEPTORS,
     useClass: MsalInterceptor,
     multi:true
-  }, MsalGuard],
+  }, MsalGuard, AzureAdService],
   bootstrap: [AppComponent, MsalRedirectComponent]
 })
 export class AppModule { }

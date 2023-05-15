@@ -37,7 +37,7 @@
                  <hr>OU<hr>
             </div>
             <div class="mb-3 d-flex">
-                  <button type="button" class="btn btn-light d-block mx-auto"><img src="../../../assets/MSFT.png" class="azure"> &nbsp; Continuer avec Microsoft Azure</button>
+                  <button type="button" class="btn btn-light d-block mx-auto" *ngIf="!isUserLoggedIn" (click)="login()"><img src="../../../assets/MSFT.png" class="azure"> &nbsp; Continuer avec Microsoft Azure</button>
             </div>
         </form>
     </mat-card>
@@ -47,4 +47,5 @@
   <p>&copy; {{currentYear}} Sinorfi. Tous droits réservés.</p>
 </mat-toolbar>
 </body>
+<router-outlet></router-outlet>
 
